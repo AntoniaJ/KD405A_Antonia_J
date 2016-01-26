@@ -75,9 +75,9 @@ public class Main extends JFrame {
 		setJMenuBar(menuBar);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
+		menuBar.add(lblNewLabel_1);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setIcon(new ImageIcon("/Users/antoniajungbeck/Documents/Interaktionsdesign /KD405A_Antonia_J/Assigment_1/src/se/mah/KD405A/nordic_pytte.png"));
-		menuBar.add(lblNewLabel_1);
 		
 		JMenu mnArkiv = new JMenu("  Arkiv");
 		menuBar.add(mnArkiv);
