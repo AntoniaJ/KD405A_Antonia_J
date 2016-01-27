@@ -96,7 +96,8 @@ public class HouseGUI extends JFrame {
 		myHouses[8] = new House(1856, 990);
 		myHouses[9] = new House(2005, 645);
 		
-		String printString;
+		
+		String printString; 
 		textArea.append("uppgift 1.3 \n");
 		
 		
