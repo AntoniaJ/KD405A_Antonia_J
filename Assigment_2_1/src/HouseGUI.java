@@ -65,7 +65,7 @@ public class HouseGUI extends JFrame {
 		lblHuslista.setBounds(186, 57, 144, 16);
 		contentPane.add(lblHuslista);
 		
-		House house1 = new House(1988, 190);
+		House house1 = new House(1988, 30);
 		House house2 = new House(1994, 200);
 		House house3 = new House(2001, 110);
 		
