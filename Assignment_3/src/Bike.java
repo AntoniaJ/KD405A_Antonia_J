@@ -21,7 +21,7 @@ public class Bike {
 		public int numberOfBikes;
 		
 	
-	public Bike(String color, int size){
+	public Bike(int size, String color){
 	 this.color = color;
 	 this.size = size;
  }
@@ -29,12 +29,10 @@ public class Bike {
 	
  /**Constructors*/
 	
-	public Bike(String color, int size, int price){
+	public Bike(int size, String color, int price){
 	 this.color = color;
 	 this.size = size;
-	 this.price = price;
-	 
-	
+	 this.price = price;	
 	 
 	 if(size<= Constants.MIN_SIZE){
 		 this.size = Constants.MIN_SIZE;
@@ -45,12 +43,12 @@ public class Bike {
 	 }
 	 
 	 if(price <= Constants.MIN_PRICE){
-		 this.size = Constants.MIN_PRICE;
+		 this.price = Constants.MIN_PRICE;
 		 
 	 }
 	 
 	 if(price >= Constants.MAX_PRICE){
-		 this.size = Constants.MAX_PRICE;
+		 this.price = Constants.MAX_PRICE;
 	 }
 	 
 	 if(numberOfBikes >= Constants.MAX_NUMBER_OF_BIKES){
@@ -68,7 +66,7 @@ public class Bike {
 		 }
 	 }
 	 
- }
+}
 	/**Methods*/
 	
  public String getColor(){
@@ -77,6 +75,7 @@ public class Bike {
  
  public int getSize(){
 	 return this.size;
+	 
  }
 
  public int getPrice(){

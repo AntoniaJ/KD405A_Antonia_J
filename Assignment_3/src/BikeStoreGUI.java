@@ -44,28 +44,28 @@ public class BikeStoreGUI extends JFrame {
 	 */
 	public BikeStoreGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 489, 380);
+		setBounds(100, 100, 527, 355);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JTextArea bikeList = new JTextArea();
-		bikeList.setBounds(253, 27, 198, 180);
+		bikeList.setBounds(180, 27, 329, 180);
 		contentPane.add(bikeList);
 		
 		textPrice = new JTextField();
-		textPrice.setBounds(62, 27, 158, 38);
+		textPrice.setBounds(62, 169, 106, 38);
 		contentPane.add(textPrice);
 		textPrice.setColumns(10);
 		
 		textColor = new JTextField();
-		textColor.setBounds(62, 100, 158, 38);
+		textColor.setBounds(62, 100, 106, 38);
 		contentPane.add(textColor);
 		textColor.setColumns(10);
 		
 		textSize = new JTextField();
-		textSize.setBounds(62, 169, 158, 38);
+		textSize.setBounds(62, 27, 106, 38);
 		contentPane.add(textSize);
 		textSize.setColumns(10);
 		
@@ -73,8 +73,7 @@ public class BikeStoreGUI extends JFrame {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-
-				myStore.addBike1(textColor.getText(), Integer.parseInt(textPrice.getText()), Integer.parseInt(textSize.getText()));
+				myStore.addBike1(Integer.parseInt(textPrice.getText()), textColor.getText(), Integer.parseInt(textSize.getText()));
 	bikeList.setText(myStore.getAllBikes());
 	textColor.setText("");
 	textPrice.setText("");
