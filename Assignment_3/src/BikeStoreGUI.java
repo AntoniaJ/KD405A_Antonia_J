@@ -14,11 +14,14 @@ import java.awt.event.ActionEvent;
 
 public class BikeStoreGUI extends JFrame {
 
-	protected static final JTextComponent BikeListTextArea = null;
+	//protected static final JTextComponent BikeListTextArea = null;
 	private JPanel contentPane;
 	private JTextField textPrice;
 	private JTextField textColor;
 	private JTextField textSize;
+	
+	BikeStore myStore = new BikeStore();
+	
 
 	/**
 	 * Launch the application.
@@ -47,6 +50,10 @@ public class BikeStoreGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JTextArea bikeList = new JTextArea();
+		bikeList.setBounds(253, 27, 198, 180);
+		contentPane.add(bikeList);
+		
 		textPrice = new JTextField();
 		textPrice.setBounds(62, 27, 158, 38);
 		contentPane.add(textPrice);
@@ -65,19 +72,20 @@ public class BikeStoreGUI extends JFrame {
 		JButton btnAdd = new JButton("Add Bike");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BikeStore.addBike1(textColor.getText(), Integer.parseInt(textPrice.getText()), Integer.parseInt(textSize.getText()));
-	BikeListTextArea.setText(BikeStore.getAllBikes());
-	textColor.setText(" ");
-	textPrice.setText(" ");
-	textSize.setText(" ");
+				bikeList.setText ("");
+
+				myStore.addBike1(textColor.getText(), Integer.parseInt(textPrice.getText()), Integer.parseInt(textSize.getText()));
+	bikeList.setText(myStore.getAllBikes());
+	textColor.setText("");
+	textPrice.setText("");
+	textSize.setText("");
 			}
 		});
+		
 		btnAdd.setBounds(80, 257, 117, 29);
 		contentPane.add(btnAdd);
 		
-		JTextArea bikeList = new JTextArea();
-		bikeList.setBounds(253, 27, 198, 180);
-		contentPane.add(bikeList);
+		
 		
 		JLabel lblPrice = new JLabel("Price");
 		lblPrice.setBounds(6, 38, 61, 16);

@@ -1,6 +1,20 @@
 /**class*/
 public class Bike {
 		
+		public void setColor(String color) {
+		this.color = color;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	public void setNumberOfBikes(int numberOfBikes) {
+		this.numberOfBikes = numberOfBikes;
+	}
+
+
 		public String color;
 		public int price;
 		public int size;
@@ -11,11 +25,16 @@ public class Bike {
 	 this.color = color;
 	 this.size = size;
  }
+	
+	
  /**Constructors*/
+	
 	public Bike(String color, int size, int price){
 	 this.color = color;
 	 this.size = size;
 	 this.price = price;
+	 
+	
 	 
 	 if(size<= Constants.MIN_SIZE){
 		 this.size = Constants.MIN_SIZE;
@@ -62,6 +81,10 @@ public class Bike {
 
  public int getPrice(){
 	 return this.price;
+ }
+ 
+ public void setPrice1(int newPrice){
+	 this.price = newPrice;
  }
 
  
