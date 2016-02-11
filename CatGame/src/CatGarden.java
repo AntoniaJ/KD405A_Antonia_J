@@ -35,6 +35,7 @@ public class CatGarden {
 	}
 	
 	public void killCat(){
+		if(allCats.size()>0);
 		allCats.remove(0);
 		
 	}
