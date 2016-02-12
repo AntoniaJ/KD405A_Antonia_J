@@ -1,16 +1,17 @@
 
 public abstract class Animal {
 	
-	//methods
+	/**methods*/
 	private String latinName;
 	private String friendlyName;
 	
-	//Constructors
+	/**Constructors*/
 	public Animal(String latinName){
 		this.latinName = latinName;
 		
 	}
 	
+	/**returns the methods for subclasses*/
 	public abstract String getInfo();
 	
 	

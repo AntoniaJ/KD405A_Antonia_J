@@ -1,10 +1,10 @@
 
 public class Snake extends Animal {
 	
-	//methods
+	/**methods*/
 	private boolean poisonous;
 	
-	//Constructors
+	/**Constructors*/
 	public Snake(String latinName, boolean poisonous){
 		super(latinName);
 		this.poisonous = poisonous;
@@ -14,10 +14,14 @@ public class Snake extends Animal {
 		return poisonous;
 	}
 
+	/**Loop where the information is printed*/
 	@Override
 	public String getInfo() {
-		return "I am snake"+ getLatinName();
+		if(isPoisonous() == true){
+		return ("I am a snake with the latin name "+ getLatinName() + " and I am poisonous");
+	}else{
+		return("I am a snake with the latin name "+ getLatinName() + " and I am not poisonous");
 	}
-	
-}
+	}
 
+}

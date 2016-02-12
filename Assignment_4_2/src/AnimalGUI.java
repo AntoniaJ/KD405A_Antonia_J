@@ -8,6 +8,7 @@ import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.util.ArrayList;
+import javax.swing.JScrollPane;
 
 public class AnimalGUI extends JFrame {
 
@@ -32,6 +33,8 @@ public class AnimalGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	/** prints out the animals in a Arraylist*/
 	public AnimalGUI() {
 		
 		ArrayList<Animal> myAnimals = new ArrayList<Animal>();
@@ -49,7 +52,7 @@ public class AnimalGUI extends JFrame {
 		myAnimals.add(d2);
 		myAnimals.add(a2);
 		
-			
+		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 523, 368);
@@ -58,9 +61,12 @@ public class AnimalGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(75, 98, 354, 177);
+		contentPane.add(scrollPane);
+		
 		JTextArea animalText = new JTextArea();
-		animalText.setBounds(75, 98, 354, 177);
-		contentPane.add(animalText);
+		scrollPane.setViewportView(animalText);
 		
 		JLabel animalLabel = new JLabel("The Animals");
 		animalLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));

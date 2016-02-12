@@ -1,10 +1,10 @@
 
 public class Dog extends Mammal {
 
-	//Methods
+	/**Methods*/
 	private boolean stupid;
 	
-	//Constructors
+	/**Constructors*/
 	public Dog (String latinName, int gestationTime, boolean stupid){
 		super (latinName, gestationTime);
 		this.stupid = stupid;	
@@ -20,9 +20,17 @@ public class Dog extends Mammal {
 		return stupid;
 	}
 
+	/**String where the information is printed*/
 	@Override
 	public String getInfo() {
-		return "My friendly name is " + getFriendlyName() + "and my latin name is " + getLatinName();
-	}
+		if(isStupid() == true){
+			return("The dog " + getFriendlyName() + " has the latin name " + getLatinName() + ", nurses for " + getGestationTime() + " months and is stupid");
+		}else{
+			return("The dog " + getFriendlyName() + " has the latin name " + getLatinName() + ", nurses for " + getGestationTime() + " months and is clever");
+		}
+		
 	
 }
+}
+
+/** the dog xx, latin: xx nurses for xx months and is xx*/

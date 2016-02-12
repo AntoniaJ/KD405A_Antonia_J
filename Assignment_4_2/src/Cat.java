@@ -1,11 +1,11 @@
 
 public class Cat extends Mammal{
 	
-	//Methods
+	/**Methods*/
 	private int numberOfLives;
 	
 	
-	//Constructors
+	/**Constructors*/
 	public Cat(String latinName, int gestationTime, int numberOfLives){
 		super(latinName, gestationTime);
 		this.numberOfLives = numberOfLives;
@@ -21,9 +21,12 @@ public class Cat extends Mammal{
 		this.numberOfLives = numberOfLives;
 	}
 
-
+	/** String where the information is printed*/
+	@Override
 	public String getInfo() {
-		return "I am a cat and my latin name is" + getLatinName();
+		return "A cat has the latin name " + getLatinName() +" nurses for "+ getGestationTime() + " months and has "+ getNumberOfLives() + " lives";
 	}
 
 }
+
+/**a cat latin: xx, nurses for xx months and has xx lives*/
