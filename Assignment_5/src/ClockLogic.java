@@ -30,6 +30,7 @@ public class ClockLogic {
 	private class ClockThread extends Thread{
 		@Override
 		public void run() {
+			DecimalFormat df = new DecimalFormat("00");
 			while(true){
 				try {
 					Thread.sleep(900);
@@ -50,12 +51,12 @@ public class ClockLogic {
 					
 				System.out.println(sdf.format(calendar.getTime()));
 					
-				System.out.println("hour \t\t: " + hour);
+				/**System.out.println("hour \t\t: " + hour);
 				System.out.println("hourOfDay \t: " + hourOfDay);
 				System.out.println("minute \t\t: " + minute);
 				System.out.println("second \t\t: " + second);
-				System.out.println("millisecond \t: " + millisecond);
-				digitalClockGUI.setTimeOnLabel(hourOfDay + ":" + minute + ":" + second);
+				System.out.println("millisecond \t: " + millisecond);**/
+				digitalClockGUI.setTimeOnLabel(df.format(hourOfDay) + ":" +df.format(minute) + ":" + df.format(second));
 				
 				if((hourOfDay == alarmHour && minute == alarmMinute)) {
 					digitalClockGUI.activeAlarm(true);
