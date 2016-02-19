@@ -56,6 +56,7 @@ public class ClockLogic {
 				System.out.println("minute \t\t: " + minute);
 				System.out.println("second \t\t: " + second);
 				System.out.println("millisecond \t: " + millisecond);**/
+				
 				digitalClockGUI.setTimeOnLabel(df.format(hourOfDay) + ":" +df.format(minute) + ":" + df.format(second));
 				
 				if((hourOfDay == alarmHour && minute == alarmMinute)) {

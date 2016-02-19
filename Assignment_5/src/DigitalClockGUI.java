@@ -13,6 +13,7 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.UIManager;
+import java.awt.Toolkit;
 
 public class DigitalClockGUI extends JFrame {
 	private ClockLogic clockLogic;
@@ -126,6 +127,12 @@ public class DigitalClockGUI extends JFrame {
 		alarmMessage.setBounds(110, 312, 226, 45);
 		contentPane.add(alarmMessage);
 		
+		JLabel lblNewLabel = new JLabel("Wakey Wakey");
+		lblNewLabel.setForeground(new Color(105, 105, 105));
+		lblNewLabel.setFont(new Font("Minion Pro", Font.PLAIN, 23));
+		lblNewLabel.setBounds(6, 6, 176, 29);
+		contentPane.add(lblNewLabel);
+		
 		sunLabel = new JLabel("");
 		sunLabel.setIcon(new ImageIcon("/Users/antoniajungbeck/Desktop/sun.png"));
 		sunLabel.setBounds(6, 6, 402, 362);
@@ -154,7 +161,5 @@ public class DigitalClockGUI extends JFrame {
 
 		
 		} 
-
-		
 	}    
 	   
