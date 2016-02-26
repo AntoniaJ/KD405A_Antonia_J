@@ -1,0 +1,30 @@
+XML
+
+Malmö C - Lund C
+
+2. ?cmdaction=next&selPointFr=0|80000|0&selPointTo=0|81216|0&noOf5  
+
+3. <Journeys>
+	innehåller 5 sökningar
+		<Journey>
+		tid för avgång och ankomst, gångdistans och tid. hur många byten och antal zoner, vilket typ av restaxa. Prisinformation och avgångsstation och ankomststation. Även vilken linje och distans till destination. 
+			<Route Links>
+			information om transportvägen.
+				<Route Link>
+				tid för avgång och ankomst, priszoner, eventuella förseningar och plats för avgång och ankomst. Linjeinformation.
+ 				</Route Link>
+ 			</Route Links>
+ 		</Journey>
+ 	</Journeys>			
+ 		
+ 
+ 4. Det visas under taggen <NoOfChanges> som ligger under <Journey> vilket i sin tur ligger under <Journeys>.
+ 
+ 5. <PriceInfo>
+		<PriceType> </PriceType>
+		<Price></Price>
+		<VAT></VAT>
+		<JourneyTicketKey></JourneyTicketKey>
+	</PriceInfo>
+ 
+ 
