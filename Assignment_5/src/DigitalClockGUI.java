@@ -134,7 +134,7 @@ public class DigitalClockGUI extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		sunLabel = new JLabel("");
-		sunLabel.setIcon(new ImageIcon("/Users/antoniajungbeck/Desktop/sun.png"));
+		sunLabel.setIcon(new ImageIcon("/Users/antoniajungbeck/Documents/Interaktionsdesign /KD405A_Antonia_J/A6_Antonia_J/sun.png"));
 		sunLabel.setBounds(6, 6, 402, 362);
 		contentPane.add(sunLabel);
 		clockLogic = new ClockLogic(this);
